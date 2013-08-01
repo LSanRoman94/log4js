@@ -1,0 +1,16 @@
+{
+  "name": "log4js",
+  "repo": "nzack/log4js",
+  "version": "0.0.1",
+  "development": {
+    "virtru-components/chai": "*"
+  },
+  "scripts": [
+    "lib/index.js",
+    "lib/util/util.js",
+    "lib/formats/date.js"
+  ],
+  "testScripts": [
+    "tests/test.js"
+  ]
+}
