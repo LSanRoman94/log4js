@@ -7,8 +7,12 @@
   },
   "scripts": [
     "lib/index.js",
+    "lib/log4js.js",
     "lib/util/util.js",
-    "lib/formats/date.js"
+    "lib/util/logLog.js",
+    "lib/formats/date.js",
+    "lib/layouts/layout.js",
+    "lib/layouts/null-layout.js"
   ],
   "testScripts": [
     "tests/test.js"
