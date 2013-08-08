@@ -7,12 +7,25 @@
   },
   "scripts": [
     "lib/index.js",
+    "lib/event-support.js",
     "lib/log4js.js",
-    "lib/util/util.js",
-    "lib/util/logLog.js",
+    "lib/level.js",
+    "lib/logging-event.js",
+    "lib/appenders/ajax-appender.js",
+    "lib/appenders/alert-appender.js",
+    "lib/appenders/appender.js",
+    "lib/appenders/browser-console-appender.js",
     "lib/formats/date.js",
+    "lib/formats/simple-date-format.js",
+    "lib/layouts/http-post-data-layout.js",
+    "lib/layouts/json-layout.js",
     "lib/layouts/layout.js",
-    "lib/layouts/null-layout.js"
+    "lib/layouts/null-layout.js",
+    "lib/layouts/pattern-layout.js",
+    "lib/layouts/simple-layout.js",
+    "lib/layouts/xml-layout.js",
+    "lib/util/logLog.js",
+    "lib/util/util.js"
   ],
   "testScripts": [
     "tests/test.js"
