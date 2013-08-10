@@ -1,27 +1,34 @@
-var log4js = require('../lib/index')
-
-
+var log4js = require('../lib/index');
 
 describe('log4js', function() {
 
   describe('the damn thing should just load', function() {
 
-    it('#fromString', function() {
-      console.log(['log4js', log4js]);
+    var appender;
+    var layout;
 
+    afterEach(function(){
       var log = log4js.getLogger();
-      var popUpAppender = new log4js.BrowserConsoleAppender();
-      var popUpLayout = new log4js.PatternLayout("%d{HH:mm:ss} %-5p - %m%n");
+      appender.setLayout(layout);
+      appender.setThreshold(log4js.Level.ERROR);
+      log.addAppender(appender);
 
-      console.log(['popupAppender', popUpAppender]);
-      console.log(['popupLayout', popUpLayout]);
-      popUpAppender.setLayout(popUpLayout);
-      popUpAppender.setThreshold(log4js.Level.ERROR);
-      log.addAppender(popUpAppender);
+      log.debug("Debugging message...");
+      log.info("Info message...");
+      log.warn("Warning message...");
+      log.error("Error message...");
+      log.fatal("Fatal message...");
+    });
+
+    it('#fromString', function() {
+      appender = new log4js.BrowserConsoleAppender();
+      layout = new log4js.PatternLayout("%d{HH:mm:ss} %-5p - %m%n");
+    });
 
 
-      log.debug("Debugging message (appears in pop-up)");
-      log.error("Error message (appears in pop-up and in server log)");
+    it('Json Layout', function() {
+      appender = new log4js.BrowserConsoleAppender();
+      layout = new log4js.JsonLayout(true, false);
     });
 
   });

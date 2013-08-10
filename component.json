@@ -10,6 +10,7 @@
     "lib/event-support.js",
     "lib/log4js.js",
     "lib/level.js",
+    "lib/logger.js",
     "lib/logging-event.js",
     "lib/appenders/ajax-appender.js",
     "lib/appenders/alert-appender.js",
@@ -25,7 +26,8 @@
     "lib/layouts/simple-layout.js",
     "lib/layouts/xml-layout.js",
     "lib/util/logLog.js",
-    "lib/util/util.js"
+    "lib/util/util.js",
+    "lib/util/timer.js"
   ],
   "testScripts": [
     "tests/test.js"
