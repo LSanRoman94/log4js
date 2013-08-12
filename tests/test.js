@@ -1,4 +1,4 @@
-var log4js = require('../lib/index');
+var log4js = require('../index');
 
 describe('log4js', function() {
 

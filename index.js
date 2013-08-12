@@ -32,24 +32,24 @@
 
 /* -------------------------------------------------------------------------- */
 
-var log4js = require('./log4js');
+var log4js = require('./lib/log4js');
 
-log4js.AjaxAppender           = require('./appenders/ajax-appender');
-log4js.AlertAppender          = require('./appenders/alert-appender');
-log4js.Appender               = require('./appenders/appender');
-log4js.BrowserConsoleAppender = require('./appenders/browser-console-appender');
+log4js.AjaxAppender           = require('./lib/appenders/ajax-appender');
+log4js.AlertAppender          = require('./lib/appenders/alert-appender');
+log4js.Appender               = require('./lib/appenders/appender');
+log4js.BrowserConsoleAppender = require('./lib/appenders/browser-console-appender');
 
-log4js.SimpleDateFormat       = require('./formats/simple-date-format');
+log4js.SimpleDateFormat       = require('./lib/formats/simple-date-format');
 
-log4js.HttpPostDataLayout     = require('./layouts/http-post-data-layout');
-log4js.JsonLayout             = require('./layouts/json-layout');
-log4js.Layout                 = require('./layouts/layout');
-log4js.NullLayout             = require('./layouts/null-layout');
-log4js.PatternLayout          = require('./layouts/pattern-layout');
-log4js.SimpleLayout           = require('./layouts/simple-layout');
-log4js.XmlLayout              = require('./layouts/xml-layout');
+log4js.HttpPostDataLayout     = require('./lib/layouts/http-post-data-layout');
+log4js.JsonLayout             = require('./lib/layouts/json-layout');
+log4js.Layout                 = require('./lib/layouts/layout');
+log4js.NullLayout             = require('./lib/layouts/null-layout');
+log4js.PatternLayout          = require('./lib/layouts/pattern-layout');
+log4js.SimpleLayout           = require('./lib/layouts/simple-layout');
+log4js.XmlLayout              = require('./lib/layouts/xml-layout');
 
-log4js.Level                  = require('./level');
+log4js.Level                  = require('./lib/level');
 
 
 module.exports = exports = log4js;

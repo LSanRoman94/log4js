@@ -6,7 +6,7 @@
     "virtru-components/chai": "*"
   },
   "scripts": [
-    "lib/index.js",
+    "index.js",
     "lib/event-support.js",
     "lib/log4js.js",
     "lib/level.js",
