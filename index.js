@@ -38,11 +38,13 @@ log4js.AjaxAppender           = require('./lib/appenders/ajax-appender');
 log4js.AlertAppender          = require('./lib/appenders/alert-appender');
 log4js.Appender               = require('./lib/appenders/appender');
 log4js.BrowserConsoleAppender = require('./lib/appenders/browser-console-appender');
+log4js.InMemoryQueueAppender  = require('./lib/appenders/in-memory-queue-appender');
 
 log4js.SimpleDateFormat       = require('./lib/formats/simple-date-format');
 
 log4js.HttpPostDataLayout     = require('./lib/layouts/http-post-data-layout');
 log4js.JsonLayout             = require('./lib/layouts/json-layout');
+log4js.InMemoryObjectLayout   = require('./lib/layouts/in-memory-object-layout');
 log4js.Layout                 = require('./lib/layouts/layout');
 log4js.NullLayout             = require('./lib/layouts/null-layout');
 log4js.PatternLayout          = require('./lib/layouts/pattern-layout');
@@ -50,6 +52,12 @@ log4js.SimpleLayout           = require('./lib/layouts/simple-layout');
 log4js.XmlLayout              = require('./lib/layouts/xml-layout');
 
 log4js.Level                  = require('./lib/level');
+
+log4js.dumpToConsole = function(numMessages) {
+  log4js.inMemoryLogger.dumpToConsole(numMessages);
+}
+
+require('./lib/util/util').setLog4js(log4js);
 
 
 module.exports = exports = log4js;
