@@ -1,0 +1,9 @@
+{
+  "name": "log4js",
+  "repo": "virtru-components/log4js",
+  "description": "",
+  "version": "0.0.10",
+  "dependencies": {
+  },
+  "license": "MIT"
+}

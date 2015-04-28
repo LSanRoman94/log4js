@@ -21,13 +21,13 @@ describe('log4js', function() {
     });
 
     it('#fromString', function() {
-      appender = new log4js.BrowserConsoleAppender();
+      appender = new log4js.BrowserConsoleAppender(log4js);
       layout = new log4js.PatternLayout("%d{HH:mm:ss} %-5p - %m%n");
     });
 
 
     it('Json Layout', function() {
-      appender = new log4js.BrowserConsoleAppender();
+      appender = new log4js.BrowserConsoleAppender(log4js);
       layout = new log4js.JsonLayout(true, false);
     });
 
