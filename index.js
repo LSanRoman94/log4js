@@ -59,5 +59,11 @@ log4js.dumpToConsole = function(numMessages) {
 
 require('./lib/util/util').setLog4js(log4js);
 
+// If we are running in a page script, enable users to create a logging widget on demand
+if (typeof window !== 'undefined') {
+  try {
+    require('./lib/widget').createWidget(log4js);
+  } catch (e) {}
+}
 
 module.exports = exports = log4js;
